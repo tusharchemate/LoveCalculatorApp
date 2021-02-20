@@ -1,0 +1,25 @@
+body {
+	background-color: #010101;
+	font-family: 'Berkshire Swash', cursive;
+}
+
+.jumbotron {
+	background-color: #010101 !important;
+	box-shadow: 1px 1px 8px #00e7ff;
+	border-radius: 20px;
+}
+
+.jumbotron:hover {
+	box-shadow: 0px 1px 12px rgb(65, 220, 149);
+	background-color: rgb(0, 0, 0);
+	color: #e01926;
+}
+
+.h-10 {
+	height: 240px;
+}
+
+#loadingProgressG {
+	display: none;
+}
+

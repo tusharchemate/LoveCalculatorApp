@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/4.2.1/css/bootstrap.css" />
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/custom.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+	rel="stylesheet">
+
+
+<title>&T Welcomes You !</title>
+</head>
+<body>
+	<div class="row text-center justify-content-center">
+
+		<h2 class="text-primary justify-content-center align-self-center ml-5">Test
+			Your Bond</h2>
+		<img src="Heart-3.8s-450px.svg" class="img-fluid w-25 h-10">
+
+		<div class="container h-100">
+			<div class="row align-items-center h-100">
+				<div class="col-8 mx-auto center">
+					<div class="jumbotron box">
+						<form th:action="@{/Calculate_love}" method="post" class="form">
+							<div class="container">
+								<div class="form-group row">
+									<label class="col-4 text-right text-success h5">Your
+										Name </label>
+									<div class="col-8">
+										<input class="form-control" type="text" name="username" id="username"
+											required />
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-4 text-right text-success h5">Crush
+										Name </label>
+									<div class="col-8">
+
+										<input class="form-control" type="text" name="crushname" id="crushname"
+											required />
+									</div>
+								</div>
+							</div>
+							<div class="">
+								<button type="submit" id="button1" class="btn btn-primary btn-lg w-25">Test</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="loadingProgressG" class="text-center text-white h5">
+		<img src="Spinner-2.6s-71px.svg" />Please wait
+	</div>
+	
+	<div class="text-danger text-center  h3" id="result">
+		Your Bond is :<span th:text="${result}"></span>
+	</div>
+
+</body>
+</html>
